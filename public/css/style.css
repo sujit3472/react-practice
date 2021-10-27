@@ -1,0 +1,2266 @@
+@font-face {
+    font-family: 'MontserratMedium';
+    src: url('../fonts/MontserratMedium.eot');
+    src: url('../fonts/MontserratMedium.eot') format('embedded-opentype'),
+         url('../fonts/MontserratMedium.woff2') format('woff2'),
+         url('../fonts/MontserratMedium.woff') format('woff'),
+         url('../fonts/MontserratMedium.ttf') format('truetype'),
+         url('../fonts/MontserratMedium.svg#MontserratMedium') format('svg');
+}
+@font-face {
+    font-family: 'MontserratSemiBold';
+    src: url('../fonts/MontserratSemiBold.eot');
+    src: url('../fonts/MontserratSemiBold.eot') format('embedded-opentype'),
+         url('../fonts/MontserratSemiBold.woff2') format('woff2'),
+         url('../fonts/MontserratSemiBold.woff') format('woff'),
+         url('../fonts/MontserratSemiBold.ttf') format('truetype'),
+         url('../fonts/MontserratSemiBold.svg#MontserratSemiBold') format('svg');
+}
+@font-face {
+    font-family: 'MontserratBold';
+    src: url('../fonts/MontserratBold.eot');
+    src: url('../fonts/MontserratBold.eot') format('embedded-opentype'),
+         url('../fonts/MontserratBold.woff2') format('woff2'),
+         url('../fonts/MontserratBold.woff') format('woff'),
+         url('../fonts/MontserratBold.ttf') format('truetype'),
+         url('../fonts/MontserratBold.svg#MontserratBold') format('svg');
+}
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../fonts/MontserratRegular.eot');
+    src: url('../fonts/MontserratRegular.eot') format('embedded-opentype'),
+         url('../fonts/MontserratRegular.woff2') format('woff2'),
+         url('../fonts/MontserratRegular.woff') format('woff'),
+         url('../fonts/MontserratRegular.ttf') format('truetype'),
+         url('../fonts/MontserratRegular.svg#MontserratRegular') format('svg');
+}
+
+/*======================= icon moon =========================*/
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?6k6z1y');
+    src:  url('../fonts/icomoon.eot?6k6z1y#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?6k6z1y') format('truetype'),
+      url('../fonts/icomoon.woff?6k6z1y') format('woff'),
+      url('../fonts/icomoon.svg?6k6z1y#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} 
+.icon-dashboard:before {
+    content: "\e900";
+    color: #000000;
+    font-size: 1.4rem;
+}
+.icon-dollars-money-bag-on-a-hand:before {
+    content: "\e901";
+    color: #000000;
+    font-size: 1.4rem;
+}
+.icon-gear:before {
+    content: "\e902";
+    color: #000000;
+    font-size: 1.4rem;
+}
+.icon-wallet1:before {
+    content: "\e903";
+    color: #000000; 
+    font-size: 1.4rem; 
+}
+/*======================= end of icon moon =========================*/
+/* common css */
+p,form, ul,li, a, h1,h2,h3,h4, h5, h6{
+	padding: 0; margin: 0; list-style: none;
+}
+a{color: #F79522;font-weight: 600; font-size: 1.1rem;}
+a:hover,a:focus{color: #F79522}
+a,a:hover,a:focus,.btn{
+	transition: .5s all;
+	-moz-transition: .5s all;
+	-webkit-transition: .5s all;
+	-o-transition: .5s all; text-decoration: none;
+}
+input, input:hover, input:focus, button, button:hover, button:focus, button:active, button.active
+,.btn:hover,.btn:focus, .form-control,.form-control:hover,.form-control:focus{
+	outline: none; box-shadow: none;
+}
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+/* end of common css */
+body {
+    font-family: 'MontserratMedium';
+    font-size: 16px;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+/*=============================== log in page =============================================*/
+.login {
+    background-image: url('../images/login-bg.png');
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+.login::after {
+    position: fixed;
+    content: "";
+    background-image: url(../images/side-image.png);
+    width: 100%;
+    height: 450px;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    left: -55px;
+}
+.login .row.row_wrap {
+    padding: 0px 6rem;
+}
+.inner_col_wrap.login_btn_bg {
+    margin-top: 6rem;
+}
+.login .inner_col_wrap > div {
+    display: flex;
+    align-items: center;
+    height: 120vh;
+}
+.login .form-control {
+    border: none;
+    border-bottom: 1px solid #E44240;
+    border-radius: 0;
+    background: transparent;
+    color: #3B0000;
+    font-family: 'MontserratSemiBold';
+    font-size: 1.25rem;
+}
+.login .form-control:focus {
+    box-shadow: unset;
+}
+.inner_col_wrap form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 3px 6px 50px #c3c3c3;
+    z-index: 9;
+    color: #3B0000;
+    margin-top: 2rem;
+}
+.login .inner_col_wrap form .form-group {
+    margin-bottom: 2.5rem;
+}
+.login .inner_col_wrap form .form-group label {
+    margin-bottom: 0;
+    color: #3B0000;
+    font-family: 'MontserratSemiBold';
+    font-size: 1rem;
+}
+.login .inner_col_wrap form .form-group.password-icon {
+    position: relative;
+}
+.login .inner_col_wrap form .form-group.password-icon i {
+    position: absolute;
+    bottom: 32%;
+    right: 1rem;
+}
+.password-icon .fa-eye-slash:before,
+.password-icon .fa-eye:before {
+    color: #E44240;
+}
+.login .inner_col_wrap form .form-head {
+    margin-bottom: 2.5rem;
+}
+.login .inner_col_wrap form .form-head h2 {
+    margin: 0;
+}
+.login .inner_col_wrap form .form-head .sub_head {
+    font-size: 2.5rem;
+}
+.login .inner_col_wrap form .form-head .bold_head {
+    font-size: 2.4rem;
+    font-family: 'MontserratBold';
+}
+/* custom btn */
+.btn-custom {
+    width: 100%;
+    background-color: #E44240;
+    border: 1px solid #FFE0E0;
+    box-shadow: 0px 15px 25px #ff7a7a47;
+    padding: 1.5rem 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+.btn-custom.focus, .btn-custom:focus {
+    color: #fff;
+    background-color: #E44240;
+    border-color: #FFE0E0;
+    box-shadow: 0px 15px 25px #ff7a7a47;
+}
+.btn-custom:hover {
+    color: #fff;
+    background-color: #E44240;
+    border-color: #E44240;
+}
+.btn-custom:not(:disabled):not(.disabled).active, 
+.btn-custom:not(:disabled):not(.disabled):active, 
+.show>.btn-custom.dropdown-toggle {
+    color: #fff;
+    background-color: #E44240;
+    border-color: #E44240;
+}
+/* custom button */
+.footer_link {
+    color: #5C5C5C;
+    font-family: 'MontserratSemiBold';
+    font-size: 0.9rem;
+    margin: 2rem 0; 
+}
+.link_wrap p a {
+    color: #3B0000;
+    font-size: 1rem;
+    font-family: 'MontserratSemiBold';
+    text-decoration: none;
+}
+.link_wrap p {
+    margin: 0;
+    color: #3B0000;
+    font-size: 1rem;
+    font-family: 'MontserratSemiBold';
+}
+.link_wrap {
+    margin-top: 2rem;
+}
+.link_wrap p a.link {
+    color: #E44240;
+    font-size: 1rem;
+    font-family: 'MontserratBold';
+    text-decoration: none;
+}
+.sign_up_btn {
+    margin-top: 1rem;
+}
+/*=============================== end of log in page =============================================*/
+/*=============================== forget password page =============================================*/
+.forgot-password.login {
+    background-image: url('../images/login-bg-2.png');
+}
+.forgot-password.login .form-text {
+    color: #896666;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+/*=============================== end of forget password page =============================================*/
+/*=============================== otp password page =============================================*/
+.digit-group {
+    width: 100%;
+    margin-top: 1rem;
+}
+.digit-group input {
+    width: 17.5%;
+    border: none;
+    border-bottom: 2px solid #707070;
+    border-radius: 0;
+    background: transparent;
+    color: #E44240;
+    font-family: 'MontserratSemiBold';
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+.resend_code {
+    display: flex;
+    justify-content: space-between;
+}
+.forgot-password.login .resend_code .form-text {
+    margin-top: 1rem;
+}
+input:focus-visible {
+    outline: none;
+}
+/*=============================== end of otp password page =============================================*/
+/*=============================== reset password page =============================================*/
+.login.resetPassword input[type="email"] {
+    color: #707070;
+}
+/*=============================== end of reset password page =============================================*/
+/*=============================== changed password page =============================================*/
+.login.passwordChanged form {
+    text-align: center;
+}
+/*=============================== end of changed password page =============================================*/
+/*=============================== request-for-account-creation page =============================================*/
+/* custom btn with no background */
+.btn-customNoBg {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #E44240;
+    padding: 1.5rem 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #E44240;
+    margin-bottom: 1.2rem;
+}
+.btn-customNoBg.focus, .btn-customNoBg:focus {
+    color: #fff;
+    background-color: #E44240;
+    border-color: #FFE0E0;
+    box-shadow: unset;
+}
+.btn-customNoBg:hover {
+    color: #fff;
+    background-color: #E44240;
+    border-color: #E44240;
+}
+.btn-customNoBg:not(:disabled):not(.disabled).active, 
+.btn-customNoBg:not(:disabled):not(.disabled):active, 
+.show>.btn-customNoBg.dropdown-toggle {
+    color: #fff;
+    background-color: #E44240;
+    border-color: #E44240;
+    box-shadow: unset !important;
+}
+.btn-customNoBg:focus-visible {
+    outline: none;
+}
+/* custom btn with no background */
+/*============= account creation form ====================*/
+.login.accountCreation .inner_col_wrap > div {
+    display: flex;
+    align-items: center;
+    height: unset;
+    margin-bottom: 2rem;
+}
+.login.accountCreation .inner_col_wrap form .form-head .bold_head {
+    font-size: 1.6rem;
+    font-family: 'MontserratBold';
+}
+.login.accountCreation .inner_col_wrap form .form-head .sub_head {
+    font-size: 1.6rem;
+}
+.login.accountCreation .form-control {
+    font-size: 0.9rem;
+    color: #3B0000;
+}
+.login.accountCreation select.form-control {
+    font-size: 0.9rem;
+    border: 1px solid #E44240;
+    border-radius: 5px;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+.login.accountCreation i.fa-chevron-down {
+    position: absolute;
+    top: 27%;
+    right: 10%;
+    z-index: -1;
+}
+.login.accountCreation i.fa-chevron-down:before {
+    content: "\f078";
+    font-size: 0.6rem;
+    color: #707070;
+}
+.login.accountCreation .inner_col_wrap form .form-group {
+    margin-bottom: 1.5rem;
+}
+.login.accountCreation .form-text {
+    color: #3B0000;
+}
+/*========= custom checkbox =========*/
+.custom-control {
+    margin-top: 0.4rem;
+}
+.custom-checkbox .custom-control-label::before {
+    border-width: 2px;
+    border-radius: 2px;
+}
+.custom-checkbox .custom-control-label::after {
+    transition: background-size 0.15s ease-in-out;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 50%;
+    background-size: 0%;
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    transition: background-size 0.15s ease-in-out;
+    background-size: 60%;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #F1A09F;
+    background-color: #F1A09F;
+    padding: 0.5rem;
+}
+.custom-control-label::before,
+.custom-control-label::after {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: #F1A09F solid 1px;
+    border-radius: 5px !important;
+    margin-top: -0.2rem;
+}
+.custom-checkbox .custom-control-label span {
+    margin-left: 0.5rem;
+}
+/*========= end of custom checkbox =========*/
+/*============= end of account creation form ====================*/
+/*=============================== end of request-for-account-creation page =============================================*/
+
+/*=============================== dashboard page =============================================*/
+
+.main-sidebar {
+    background-image: url(../images/sidebar-bg.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom;
+}
+.sidebar-mini .main-sidebar .nav-link{
+    width: 100%;
+}
+body:not(.layout-fixed) .main-sidebar {
+    position: fixed;
+}
+body:not(.layout-fixed) .main-sidebar .sidebar{ 
+    padding: 0;
+    width: 100%; 
+    padding-top: 4rem;
+}
+footer {
+    background: #fff;
+    padding: 14px 0;
+}
+footer p {
+    color: #5C5C5C;
+}
+.logo_bars {
+    display: flex;
+    padding-top: 1.5rem;
+}
+li.desktop-bar-menu {
+    margin-left: 1rem;
+}
+.brand-link .brand-image {
+    margin-left: 0;
+    margin-right: 0;
+}
+/* nav dashboard */
+.nav-sidebar .nav-item {margin:0 0 0.5rem 0!important; width: 100%;}
+.nav-sidebar .nav-item:last-child {margin: 0!important;}
+.nav-sidebar .nav-item > .nav-link {  
+    width: 90% !important; 
+    color: #000000;
+    font-size: 0.9rem; 
+    position: relative; 
+    line-height: 1.7rem; 
+    padding: 12px 30px; 
+    position: relative;
+    padding: 1rem;
+    margin-left: auto;
+    font-family: 'MontserratBold';
+    display: flex;
+    align-items: center;
+}
+.nav-sidebar .nav-item > .nav-link.active{
+    background-color: #ffffff;
+    color: #FD0D1B;
+    border-radius: 2.5rem 0 0 2.5rem;
+    padding: 1rem;
+}
+.nav-sidebar .nav-item > .nav-link:hover,
+.nav-sidebar .nav-item > .nav-link:focus {
+    background-color: #ffffff;
+    color: #FD0D1B;
+    border-radius: 2.5rem 0 0 2.5rem;
+    padding: 1rem;
+}
+.nav-sidebar .nav-link p {
+    margin-left: 0.8rem;
+}
+.navbar-white {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 60%, rgba(243,191,186,0.9839286056219363) 100%);
+    padding: 1.8rem 0;
+}
+.user-profile .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: unset;
+    border-right: unset;
+    border-bottom: 0;
+    border-left: unset;
+    background-image: url(../images/down-arrow.png);
+    height: 1rem;
+    width: 1rem;
+    background-repeat: no-repeat;
+}
+.user-profile span {
+    color: #3B0000;
+    font-size: 1.2rem;
+    font-family: 'MontserratSemiBold';
+}
+.navbar .user-profile img {
+    width: 3rem;
+}
+.noti-dropdown .notify {
+    width: 2rem;
+}
+.navbar-badge {
+    font-size: .6rem;
+    font-weight: 300;
+    padding: 4px 4px;
+    position: absolute;
+    right: -6px;
+    top: 0;
+    background: #FF4646;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+/*================== hover effect on icon-moon =================================*/
+/* dashboard */
+.nav-sidebar .nav-item > .nav-link:hover > .icon-dashboard:before,
+.nav-sidebar .nav-item > .nav-link:focus > .icon-dashboard:before,
+.nav-sidebar .nav-item > .nav-link.active > .icon-dashboard:before{
+    color: #e24346;
+}
+/*icon-dollars-money-bag-on-a-hand */
+.nav-sidebar .nav-item > .nav-link:hover > .icon-dollars-money-bag-on-a-hand:before,
+.nav-sidebar .nav-item > .nav-link:focus > .icon-dollars-money-bag-on-a-hand:before,
+.nav-sidebar .nav-item > .nav-link.active > .icon-dollars-money-bag-on-a-hand:before {
+    color: #e24346;
+}
+/* wallet */
+.nav-sidebar .nav-item > .nav-link:hover > .icon-wallet1:before,
+.nav-sidebar .nav-item > .nav-link:focus > .icon-wallet1:before,
+.nav-sidebar .nav-item > .nav-link.active > .icon-wallet1:before {
+    color: #e24346;
+}
+/* gear/setting */
+.nav-sidebar .nav-item > .nav-link:hover > .icon-gear:before,
+.nav-sidebar .nav-item > .nav-link:focus > .icon-gear:before,
+.nav-sidebar .nav-item > .nav-link.active > .icon-gear:before {
+    color: #e24346;
+}
+/*================== end of hover effect on icon-moon =================================*/
+.nav-sidebar .nav-item > .nav-link i{margin-right: 7px; font-size: 26px; vertical-align: middle;}
+/* .nav-sidebar .nav-item > .nav-link:before{position:absolute; left: 0px; border-radius: 0 10px 10px 0; background:transparent; content: ''; top: 0; height: 100%; width: 7px; } */
+.nav-sidebar .nav-item > .nav-link.active:before{background-color: #9BC3FF;}
+.navbar-expand .navbar-nav .nav-link{    font-size: 1.7rem; padding: 0!important; }
+.navbar-expand .navbar-nav .nav-item{padding-right: 28px;}
+.navbar-expand .navbar-nav .nav-item:last-child{padding-right: 0}
+.navbar-expand .navbar-nav .user-profile .nav-link{
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+}
+/* nav dashboard */
+
+/* plate css */
+/* Die vierte teller */
+svg {
+    height: 50px;
+    position: absolute;
+    width: 50px;
+  }
+  
+  .plate {
+    height: 50px;
+    width: 50px;
+  }
+  .burger {
+    filter: url(#gooeyness);
+  }
+  .x {
+    transform: scale(0);
+    transition: transform 400ms;
+  }
+  .line {
+    fill: none;
+    stroke: #E44240;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: 50%;
+    transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+  }
+  path.line.line2 {
+      display: none;
+  }
+  
+  path.line.line6 {
+      display: none;
+  }
+  .x .line {
+    stroke-width: 5.5px;
+  }
+  .plate4 .x {
+    transition: transform 400ms;
+  }
+  .plate4 .line {
+    transform-origin: 50%;
+    transition: transform 400ms 100ms;
+  }
+  .active.plate4 .line {
+    transition: transform 400ms;
+  }
+  .active.plate4 .line1 {
+    transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(.7);
+  }
+  .active.plate4 .line2 {
+    transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(.7);
+  }
+  .active.plate4 .line3 {
+    transform: translateY(0px) rotate(45deg) scale(.7);
+  }
+  .active.plate4 .line4 {
+    transform: translateY(0px) rotate(-45deg) scale(.7);
+  }
+  .active.plate4 .line5 {
+    transform: translateX(18px) translateY(3px) rotate(45deg) scale(.7);
+  }
+  .active.plate4 .line6 {
+    transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(.7);
+  }
+  .active.plate4 .x {
+    transition: transform 400ms 100ms;
+    transform: scale(1);
+  }
+/* plate css */
+.noti-dropdown .label-sm{position: absolute; top: 5px; right: -5px;}
+.label-sm{width: 12px; height: 12px; background: transparent;border-radius: 50%;}
+.label-yellow{background:#F79522; }
+
+/*================== datatable =========================*/
+.dashbord_table .table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffebeb6e;
+}
+.dashbord_table .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+.dashbord_table table.dataTable.no-footer {
+    border-bottom: none;
+    margin-bottom: 2rem;
+}
+.dashbord_table table.dataTable thead th, table.dataTable thead td {
+    border-bottom: none;
+    border-top: none;
+    font-size: 0.9rem;
+    color: #262626;
+    white-space: nowrap;
+    padding-right: 1rem !important;
+}
+.dashbord_table table.dataTable tbody th, table.dataTable tbody td {
+    border-bottom: none;
+    border-top: none;
+    font-size: 1.2rem;
+    color: #262626;
+    font-family: 'MontserratRegular';
+    padding: 1rem;
+    padding-left: 0;
+    white-space: nowrap;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+    border: 1px solid #FF4646;
+    background-color: #FF4646;
+    background: #FF4646;
+    font-size: 0.9rem;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.2rem 0.6rem;
+    color: #3B0000 !important;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 0.9rem;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:active,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #fff !important;
+    border: 1px solid #FF4646;
+    background-color: #FF4646;
+    background: #FF4646;
+    font-size: 0.9rem;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.next {
+    background-color: #fff !important;
+    color: #7D7A7A !important;
+}
+.container-fluid.table-responsive.dashbord_table {
+    border: 1px solid #ffffff;
+    box-shadow: -2px 6px 20px #0000003d;
+    padding: 2rem;
+    width: 95%;
+    background-color: #FFFFFF;
+    border-radius: 2rem;
+}
+.dashbord_table table.dataTable thead th {
+    border-bottom: 1px solid #707070;
+    color: #262626;
+    padding: 0;
+    font-size: 1.1rem;
+}
+.amount_red {
+    color: #E44240;
+    font-family: 'MontserratSemiBold';
+}
+.amount_black {
+    color: #262626;
+    font-family: 'MontserratSemiBold';   
+}
+.table_head {
+    font-size: 1.5rem;
+    font-family: 'MontserratSemiBold';
+    color: #262626;
+    margin-bottom: 2rem;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+.dataTables_wrapper .dataTables_paginate .paginate_button.next,
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.next:hover {
+    border: none;
+    background-color: none;
+    background: none;
+    font-size: 0.9rem;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.next:hover {
+    color: #3B0000 !important;
+    border: none;
+}
+:focus-visible {
+    outline: unset;
+}
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #FF4646;
+    border-radius: 0.3rem;
+    padding: 5px;
+    background-color: transparent;
+    padding: 4px;
+    color: #3B0000;
+    margin: 0 0.4rem;
+}
+/*===================== user batch ====================*/
+.UserBatch {
+    background: #E24346;
+    margin: 2rem;
+    border-radius: 80px;
+}
+.UserBatch .row.row_wrap {
+    margin-right: -7.5px;
+    margin-left: -7.5px;
+}
+.user-profile_img {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: contain;
+}
+span.user-active {
+    position: absolute;
+    width: 2.3rem;
+    height: 2.3rem;
+    background: #00C6C1;
+    border-radius: 50%;
+    bottom: 6%;
+    right: 3%;
+    border: 5px solid #C3CFF8;
+}
+.black-batch {
+    padding: 4.1rem 1.5rem;
+    background: #332932;
+    border-radius: 80px 0 80px 80px;
+    position: relative;
+    z-index: 7;
+}
+.black-batch:after {
+    position: absolute;
+    background-image: url(../images/circle-icon-svg.svg);
+    content: "";
+    width: 130px;
+    height: 92px;
+    top: 30px;
+    right: 1%;
+    background-repeat: no-repeat;
+}
+.red-batch {
+    position: relative;
+    width: 90%;
+}
+.red-batch:before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/heart-icon-svg.svg);
+    width: 22rem;
+    height: 22rem;
+    background-repeat: no-repeat;
+    left: -32px;
+    top: 30px;
+    background-size: contain;
+}
+.UserBatch .row_wrap:after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/hexagon-icon.svg);
+    width: 100%;
+    height: 17rem;
+    top: 0;
+    right: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.red-batch .row {
+    position: absolute;
+    top: 3rem;
+    padding: 1rem;
+    width: 100%;
+}
+.user-wallet_balance a {
+    border: 1px solid #707070;
+    color: #000;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-family: 'MontserratSemiBold';
+    font-size: 1.8rem;
+}
+.user-wallet {
+    text-align: center;
+}
+.user-wallet p {
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-family: 'MontserratSemiBold';
+    font-size: 1rem;
+}
+.user-detail_content h4 {
+    font-family: 'MontserratSemiBold';
+    font-size: 1.7rem;
+    color: #ffffff;
+}
+.user-detail_content p {
+    font-family: 'MontserratSemiBold';
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+.user-detail {
+    position: absolute;
+    bottom: 0;
+}
+.UserBatch .row_wrap {
+    position: relative;
+}
+.user-profile_info h5 {
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-family: 'MontserratBold';
+}
+.user-profile_info p {
+    color: #FFFFFF;
+    font-size: 1.7rem;
+    font-family: 'MontserratBold';
+}
+.user-profile {
+    align-items: center;
+}
+.user-profile_info {
+    margin-left: 1rem;
+}
+.user_detail_dropdown p {
+    font-size: 1.2rem;
+    color: #3B0000;
+    font-family: 'MontserratSemiBold';
+    margin: 0;
+    line-height: 1.3;
+}
+.user_detail_dropdown p.small_text {
+    font-size: 0.9rem;
+    color: #707070;
+    font-family: 'MontserratSemiBold';
+    line-height: 1.3;
+}
+/*================end of user batch ====================*/
+/* .navbar-expand .navbar-nav .dropdown-menu {
+    width: 100%;
+} */
+.user_detail_dropdown {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+/*================== end of datatable =========================*/
+/* notification design */
+.noti-dropdown .notify_info {
+    display: flex;
+    align-items: center;
+}
+.notify_info span {
+    color: #262626;
+    font-size: 1rem;
+    font-family: 'MontserratMedium';
+}
+.notify_info span.name {
+    color: #E44240;
+    font-size: 1rem;
+}
+.noti-dropdown .dropdown-menu.dropdown-menu-right {
+    min-width: 29rem;
+}
+.noti-dropdown .notify_info p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #707070;
+}
+.noti-dropdown .notify_info .notify_img p {
+    background-color: #e4424059;
+    color: #E44240;
+    padding: 0.8rem 1rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-family: 'MontserratSemiBold';
+}
+.noti-dropdown .dropdown-item {
+    color: #E04346;
+    text-decoration: none;
+    background-color: transparent;
+    font-family: 'MontserratBold';
+    font-size: 1.1rem;
+}
+.noti-dropdown .dropdown-item.active, 
+.noti-dropdown .dropdown-item:active {
+    color: #E04346;
+    text-decoration: none;
+    background-color: transparent;
+    font-family: 'MontserratBold';
+    font-size: 1.1rem;
+}
+/* end of notification design */
+/* dashboard media query */
+@media (min-width: 992px) {
+    .sidebar-mini.sidebar-collapse .content-wrapper, 
+    .sidebar-mini.sidebar-collapse .main-footer, 
+    .sidebar-mini.sidebar-collapse .main-header {
+        margin-left: 4.6rem !important;
+    }
+    .sidebar-mini.sidebar-collapse .main-sidebar, 
+    .sidebar-mini.sidebar-collapse .main-sidebar::before {
+        width: 4.6rem;
+    }
+    li.mobile-bar-menu {
+        display: none;
+    }
+}
+@media (min-width: 992px) and (max-width: 1381px){
+    .user-detail_content h4,
+    .user-detail_content p,
+    .user-profile_info p {
+        font-size: 1rem;
+    }
+    .black-batch {
+        /* padding: 2rem; */
+    }
+    .user-profile_img {
+        width: 8rem;
+        height: 8rem; 
+    }
+}
+@media (max-width: 992px) {
+    .user-profile_img {
+        width: 8rem;
+        height: 8rem;
+    }
+    .black-batch {
+        /* padding: 2rem; */
+    }
+    .sidebar-open .plates {
+        position: absolute;    
+        left: 0;
+        z-index: 1050;
+        top: 0;
+    }
+    .sidebar-open .line{stroke: #E44240;}
+    .brand-link .brand-image {
+        margin-left: 3rem;
+    }
+    .main-header {
+        padding: 10px 19px!important;
+    }
+    .logo_bars {
+        padding-top: 0;
+    }
+    li.mobile-bar-menu .plates .active.plate4 .x {
+        position: fixed;
+    }
+    .user-wallet_balance a {
+        padding: 1rem 1rem;
+        font-size: 0.9rem;
+    }
+    .user-detail_content h4 {
+        font-size: 1rem;
+    }
+    .red-batch {
+        padding: 0;
+    }
+    .user-detail_content p,
+    .user-profile_info p {
+        font-size: 1rem;
+    }
+    .table_head {
+        font-size: 1.2rem;
+    }
+    .dashbord_table table.dataTable thead th,
+    .dashbord_table table.dataTable thead td,
+    .dashbord_table table.dataTable tbody td {
+        font-size: 0.9rem;
+    }
+    .container-fluid.table-responsive.dashbord_table {
+        padding: 1rem;
+    }
+}
+@media (max-width: 991.5px) {
+    li.desktop-bar-menu {
+        display: none;
+    }
+    .navbar-expand .navbar-nav .nav-item {
+        padding-right: 1rem;
+    }
+    .profile_content .user-profile_img {
+        padding: 0.5rem !important;
+    }
+    .profile_content .user-profile_img img {
+        width: 80%;
+    }
+}
+@media (max-width: 480px) {
+    /* .user-profile_img {
+        width: 8rem;
+        height: 6rem;
+    } */
+    .profile_batch_details {
+        left: 3%;
+    }
+    .main-header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main-header .navbar-nav {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .main-header.navbar-expand .navbar-nav .user-profile .nav-link {
+        margin-top: 1rem;
+    }
+    .main-header .user_detail_dropdown {
+        margin-left: 0.2rem;
+        margin-right: 0;
+    }
+    .red-batch:before {
+        width: auto;
+    }
+}
+/* end of dashboard media query */
+/*=============================== end of dashboard page =============================================*/
+
+/*========================== Request Payment page ===================================================*/
+.request_payment .search_field {
+    position: relative;
+}
+.request_payment .search_field img {
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    width: 1.4rem;
+}
+/* .request_payment .search_field i.fa-search {
+    position: absolute;
+    top: 30%;
+    left: 1%;
+}
+.request_payment .search_field i.fa-search:before {
+    content: "\f002";
+    font-size: 1.2rem;
+    color: #262626;
+} */
+.search_field input {
+    padding: 0 3rem;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 1px solid #E44240;
+    border-radius: 0;
+}
+.form-control:focus {
+    outline: 0;
+    box-shadow: unset;
+    border-color: #E44240;
+}
+.request_payment h1 {
+    font-family: 'MontserratSemiBold';
+    font-size: 2.5rem;
+    color: #3B0000;
+    margin: 2.1rem 0;
+}
+.request_payment .btn-customNoBg {
+    width: auto;
+    padding: 1rem 2rem;
+    color: #262626;
+    border-color: #262626;
+}
+.request_payment .btn-customNoBg:hover,
+.request_payment .btn-customNoBg:focus {
+    border-color: #E44240;
+    color: #ffffff;
+}
+.request_payment .search_field {
+    position: relative;
+    margin: 2.5rem 0;
+    margin-top: 4rem;
+}
+.request_payment .cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+/*.request_payment .cards .red_card img {
+    position: absolute;
+    width: auto;
+    right: 1rem;
+    bottom: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}*/
+
+.request_payment .cards .red_card {
+    background-color: #E24346;
+    padding: 2rem;
+    position: relative;
+    border-radius: 1rem;
+    width: 40%;
+}
+.red_card {
+    background-image: url(../images/hexagon-icon.svg);
+    /* backdrop-filter: none; */
+    background-position: right 15px bottom 15px;
+    background-repeat: no-repeat;
+    background-size: auto !important;
+}
+#co-pay-amount {padding-left: 15px !important;}
+.red_card .input-group
+{
+    width: 68% !important;
+    margin: 0 auto !important;
+}
+#amount
+{
+    padding: 0px 15px !important;
+}
+.red_card .input-group-prepend 
+{
+     margin-top: -1px !important;
+}
+.request_payment .cards .White_card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 25px #70707045;
+    margin-right: 2rem;
+    width: 45%;
+}
+.request_payment .btn-customNoBg {
+    margin: 2rem 0;
+}
+.request_payment .form-control:disabled, 
+.request_payment .form-control[readonly] {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 1.5rem;
+    font-size: 1.2rem;
+    color: #262626;
+    font-family: 'MontserratSemiBold';
+}
+.request_payment .form-control:disabled, 
+.request_payment .form-control[readonly]::placeholder {
+    font-size: 1.2rem;
+    color: #262626;
+    font-family: 'MontserratSemiBold';
+}
+.request_payment label {
+    color: #262626;
+    font-size: 1rem;
+    opacity: 0.5;
+    font-family: 'MontserratSemiBold';
+}
+.White_card .date p {
+    color: #707070;
+    font-size: 1.1rem;
+    font-family: 'MontserratRegular'
+}
+.White_card .date span {
+    color: #262626;
+    font-size: 1.1rem;
+    font-family: 'MontserratRegular';
+}
+.White_card .date {
+    margin-bottom: 1.2rem;
+}
+.request_payment .red_card .form-control:disabled, 
+.request_payment .red_card .form-control[readonly] {
+    text-align: center;
+}
+.request_payment .red_card .form-control:disabled, 
+.request_payment .red_card .form-control[readonly]::placeholder {
+    color: #ffffff;
+}
+.request_payment .red_card label {
+    color: #ffffff;
+    opacity: 1;
+    font-family: 'MontserratMedium';
+}
+.request_payment .red_card .search_field {
+    width: 80%;
+    text-align: center;
+    margin-top: 2rem;
+}
+.model_img_text p {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: #51B7B6;
+    font-family: 'MontserratSemiBold';
+}
+.denied .model_img_text p {
+    color: #F54745;
+}
+.modal_head_wrap {
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    padding: 2rem;
+    text-align: center;
+    width: 600px;
+}
+.payment_trans p {
+    color: #3B0000;
+    font-family: 'MontserratMedium';
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.payment_trans span {
+    font-family: 'MontserratBold';
+}
+.modal {
+    background: #d8d8d821;
+}
+.model_img img {
+    width: 5rem;
+}
+.modal button {
+    width: 80%;
+}
+.payment_success .payment p {
+    color: #707070ad;
+    font-size: 1rem;
+    font-family: 'MontserratBold';
+}
+.payment_success .payment p span {
+    color: #E24346;
+}
+.amount_details.row {
+    margin: 1rem 0;
+}
+.amount_details.row p {
+    color: #262626;
+    font-size: 1rem;
+    opacity: 0.5;
+    font-family: 'MontserratSemiBold';
+}
+.amount_details.row h5 {
+    font-size: 1.5rem;
+    font-family: 'MontserratSemiBold';
+}
+.payment_success p.note {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-family: 'MontserratSemiBold';
+    color: #3B0000;
+}
+.denied p.note {
+    font-size: 1rem;
+    margin: 2rem 0;
+    font-family: 'MontserratMedium';
+    color: #3B0000;
+}
+
+/*============================= end of Request Payment page ========================================*/
+/*============================= request-payment-co-pay page ========================================*/
+
+/*============================= end of request-payment-co-pay page ================================*/
+
+/*========================== wallet page ===================================================*/
+
+
+.wallet_model h4 {
+    color: #3B0000;
+    font-size: 1.5rem;
+}
+.wallet_model .amount_details.row p {
+    color: #F65A58;
+    opacity: 1;
+}
+.wallet_model .amount_details.row h5 {
+    font-size: 3rem;
+    color: #F65A58;
+}
+.transferAmount {
+    text-align: left;
+}
+.transferAmount p {
+    font-size: 1.4rem;
+    color: #3B0000;
+    margin: 0;
+    line-height: 1.5rem;
+}
+.transferAmount p.small_text {
+    font-size: 0.8rem;
+}
+.transferAmount input {
+    position: relative;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid red;
+    padding-left: 1.2rem;
+    text-align: center;
+}
+.transferAmount i.fas.fa-dollar-sign {
+    position: absolute;
+    left: 1rem;
+    top: 0.4rem;
+}
+.card.card_custom {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(228 66 64 / 22%) 50%, rgba(255,255,255,1) 100%);
+    box-shadow: none;
+    margin: 3rem 0;
+}
+.card_custom .card-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.card_custom .card-body .image {
+    width: 25%;
+}
+.card_custom .card-body .text {
+    width: 75%;
+}
+.card_custom .card-body div {
+    margin-right: 1rem;
+}
+.card_custom .card-body div p {
+    color: #3B0000;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    font-family: 'MontserratRegular';
+    text-align: left;
+}
+h4.model_head {
+    font-size: 2.5rem;
+    color: #3B0000;
+    text-align: left;
+
+}
+h4.model_head span {
+    font-family: 'MontserratBold';
+}
+#bankAccountList input[type=radio]
+{width:10%;
+}
+.addAcct form {
+    text-align: left;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+.wallet h1 {
+    font-family: 'MontserratSemiBold';
+    font-size: 2.5rem;
+    color: #3B0000;
+    margin: 2.1rem 0;
+}
+
+.wallet_black_batch {
+    background-color: #000000e6;
+    position: relative;
+    height: 20rem;
+    border-radius: 5rem;
+    border-top-left-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wallet_black_batch::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/wallet-card-bg.svg);
+    width: 100%;
+    height: 17rem;
+    top: 2rem;
+    right: 5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+/* .wallet_black_batch::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/wallet_black_bg.svg);
+    width: 100%;
+    height: 17rem;
+    top: 2rem;
+    right: 5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+} */
+
+.wallet .row_wrap {
+    background: #FF5959;
+    padding: 0;
+    margin: 0;
+    border-radius: 5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.wallet .row_wrap::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/wallet_red_bg.svg);
+    width: 70%;
+    height: 19rem;
+    top: 6rem;
+    left: 2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+.walletUserBatch label {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-family: 'MontserratSemiBold';
+    padding: 0;
+}
+.walletUserBatch .form-control,
+.walletUserBatch .form-control::placeholder {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    font-family: 'MontserratSemiBold';
+    color: #ffffff;
+    padding: 0;
+}
+.wallet_red_batch {
+    display: flex;
+    align-items: center;
+    height: 15rem;
+    justify-content: center;
+    left: 30%;
+    position: relative;
+}
+.available-balance-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff !important;
+    font-size: 2rem;
+}
+#balance {
+    font-size: 2rem;
+    padding-left: 5px !important;
+}
+.wallet .btn-customNoBg {
+    border-color: #262626;
+    color: #262626;
+}
+.wallet .btn-customNoBg:hover,
+.wallet .btn-customNoBg:focus {
+    border-color: #E24346;
+    color: #ffffff;
+}
+
+.addAcct .form-control {
+    font-size: 0.9rem;
+    border: none;
+    border-bottom: 1px solid #E44240;
+    border-radius: 0;
+    font-family: 'MontserratSemiBold';
+}
+.addAcct i.fa-chevron-down {
+    position: absolute;
+    top: 27%;
+    right: 10%;
+    /* z-index: -1; */
+}
+.addAcct select.form-control {
+    font-size: 0.9rem;
+    border: 1px solid #E44240;
+    border-radius: 5px;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    font-family: 'MontserratSemiBold';
+}
+.addAcct .fa-chevron-down:before {
+    content: "\f078";
+    font-size: 0.6rem;
+    color: #707070;
+}
+label {
+    color: #3B0000;
+    font-size: 1.1rem;
+    font-family: 'MontserratSemiBold';
+}
+.transferAmount  .fa-dollar-sign:before {
+    content: "\f155";
+    color: #F65A58;
+}
+/*========================== end of wallet page ===================================================*/
+/*========================== settings page ===================================================*/
+.settings .wallet_red_batch {
+    display: flex;
+    align-items: center;
+    height: 22rem;
+    justify-content: center;
+    left: 0;
+    position: relative;
+    background: #FF5959;
+    border-radius: 1rem;
+}
+.settings .wallet_red_batch::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/wallet_red_bg.svg);
+    width: 100%;
+    height: 20rem;
+    top: 0;
+    left: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.setting_model .card.card_custom {
+    margin: 0.5rem 0;
+}
+.setting_model .card-body img {
+    background: #F77B7A;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    width: 80%;
+}
+.setting_model h4 {
+    text-align: left;
+    color: #3B0000;
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+.setting_model .card_custom .card-body div {
+    margin: 0;
+}
+.setting_model .card_custom .card-body .form-group.row {
+    text-align: left;
+    padding: 0;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.setting_model .card_custom .card-body .form-group.row label {
+    padding: 0;
+    font-family: 'MontserratRegular';
+}
+.setting_model .card_custom .card-body .form-group.row select {
+    font-size: 0.9rem;
+    border: 1px solid #E44240;
+    border-radius: 5px;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+.setting_model .card_custom .card-body .form-group.row i {
+    position: absolute;
+    top: 27%;
+    right: 10%;
+    /* z-index: -1; */
+}
+.setting_model .card_custom .card-body .form-group.row i.fa-chevron-down:before {
+    content: "\f078";
+    font-size: 0.6rem;
+    color: #707070;
+}
+.red_text {
+    font-family: 'MontserratBold';
+    color: #E44240;
+}
+.card_custom .card-body div p.red_text {
+    font-family: 'MontserratBold';
+    color: #E44240;
+}
+.dark_text {
+    font-family: 'MontserratBold';
+    color: #262626;
+}
+.text_sub {
+    margin-top: 0.5rem;
+}
+.wallet.settings .row_wrap {
+    background-color: unset;
+}
+.subscription_btns {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.wallet .btn-customNoBg {
+    padding: 1rem 2rem;
+}
+.settings .wallet_red_batch form {
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+.settings .wallet_red_batch form label {
+    font-size: 1.5rem;
+    opacity: 1;
+    font-family: 'MontserratMedium';
+}
+.walletUserBatch .sub_input .form-control, 
+.walletUserBatch .sub_input .form-control::placeholder {
+    font-size: 1.1rem;
+    height: 1.5rem;
+}
+.settings .wallet_red_batch form .sub_input label {
+    font-size: 1.1rem;
+}
+
+
+
+.checkbox_custom .form-group {
+    display: block;
+    margin-bottom: 15px;
+}
+.checkbox_custom .form-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+.checkbox_custom .form-group label {
+    position: relative;
+    cursor: pointer;
+}
+.checkbox_custom .form-group label:before {
+    content:'';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #F65A58;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 0.3rem;
+    padding: 0.8rem;
+}
+.checkbox_custom .form-group input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.3rem;
+    left: 35%;
+    width: 6px;
+    height: 17px;
+    border: solid #707070;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.profile_modal .change_password {
+    justify-content: center;
+}
+
+.profile_modal .form-group.password-icon {
+    position: relative;
+}
+.profile_modal .password-icon i {
+    position: absolute;
+    bottom: 35%;
+    right: 2%;
+}
+.addAcct.changedPass form {
+    text-align: center;
+}
+.table.table_modal td, 
+.table.table_modal th {
+    border-top: none;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'MontserratRegular';
+    color: #262626;
+}
+.table.table_modal thead th {
+    opacity: 0.4;
+    font-family: 'MontserratSemiBold';
+    color: #262626;
+}
+.table.table_modal td:first-child, 
+.table.table_modal th:first-child {
+    text-align: left;
+}
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+    margin: 0px auto;
+}
+.avatar-upload .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    bottom: 10px;
+}
+.avatar-upload .avatar-edit input {
+    display: none;
+}
+.avatar-upload .avatar-edit input + label {
+    display: inline-block;
+    padding: 1.5rem;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #E24346;
+}
+.avatar-upload .avatar-edit input + label:hover {
+    background: #f1f1f1;
+    border-color: #E24346;
+}
+.avatar-upload .avatar-edit input + label:after {
+    content: "";
+    /* font-family: 'Font Awesome 5 Free'; */
+    color: #757575;
+    position: absolute;
+    top: 20%;
+    left: 23%;
+    text-align: center;
+    margin: auto;
+    background-image: url('../images/camera.svg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+.avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border: 2px solid #E24346;
+}
+.avatar-upload .avatar-preview > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  
+/*========================== end of settings page ===================================================*/
+/*========================== profile page ===================================================*/
+.profile_content .UserBatch .row_wrap:after{
+    content: none;
+}
+.profile_content .black-batch:after {
+    content: none;
+}
+.profile_content.wallet .row_wrap {
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+.profile_content .red-batch:before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/heart-icon-svg.svg);
+    width: 100%;
+    height: 16rem;
+    background-repeat: no-repeat;
+    left: -32px;
+    top: 1rem;
+    background-size: contain;
+}
+.profile_content .red-batch {
+    position: relative;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18rem;
+}
+.profile_batch_details {
+    position: absolute;
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 1rem;
+    opacity: 0.8;
+    text-align: center;
+}
+.profile_batch_details a {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    font-family: 'MontserratBold';
+    color: #E04346;
+}
+.edit_link {
+    margin-top: 1.1rem;
+}
+.profile_batch_details p {
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    font-family: 'MontserratBold';
+}
+.profile_content .user-profile_img {
+    position: relative;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    object-fit: contain;
+    text-align: center;
+    background-color: #fff;
+    padding: 5px;
+}
+.profile_content.wallet .row_wrap::before {
+    content: none;
+}
+
+.change_password {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}
+.change_password .icon_custom i {
+    padding: 0.5rem;
+    border: 1px solid #E24346;
+    border-radius: 50%;
+}
+.change_password .icon_custom i.fa-unlock-alt:before {
+    color: #E24346;
+}
+.change_password .icon_text p {
+    color: #E24346;
+    margin-left: 1rem;
+}
+/*========================== end of profile page ===================================================*/
+/*========================== notification page ===============================================*/
+.notify_wrap .notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.notify_wrap {
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 1px 3px 10px #5e5e5e75;
+    width: 95%;
+}
+.notify_content h1 {
+    font-family: 'MontserratSemiBold';
+    font-size: 2.5rem;
+    color: #3B0000;
+    margin: 2.1rem 0;
+}
+.notify_wrap .notify_img p {
+    background-color: #e4424059;
+    color: #E44240;
+    padding: 0.8rem 1rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-family: 'MontserratSemiBold';
+}
+.notify_wrap .text span.name {
+    color: #E44240;
+    font-size: 1rem;
+    font-family: 'MontserratSemiBold';
+}
+.notify_wrap .notification .date {
+    opacity: 0.5;
+}
+/*================================================= media query login pages ====================================*/
+.modal {
+    overflow-y: scroll;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (max-width: 1250px) {
+    .btn-custom {
+        padding: 1rem 0;
+    }
+    .login .row.row_wrap {
+        padding: 0;
+    }
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+    /* .walletUserBatch .col-md-4 {
+        flex: 0 45%;
+        max-width: 45%;
+    }
+    .walletUserBatch .col-md-8 {
+        flex: 0 55%;
+        max-width: 55%;
+    } */
+    .col-12.col-lg-10.col-md-12 {
+        flex: 0 100%;
+        max-width: 100%;
+    }
+    .settings .col-12.col-lg-10.col-md-10 {
+        flex: 0 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 1199px) {
+    .settings .col-12.col-lg-10.col-md-10 {
+        flex: 0 100%;
+        max-width: 100%;
+    }
+    .login .row.row_wrap {
+        padding: 0;
+    }
+    .login .inner_col_wrap > div {
+        display: block;
+        height: auto;
+    }
+    .footer_link {
+        margin-top: 1rem;
+    }
+    .login::after {
+        height: 425px;
+        left: -160px;
+    }
+}
+@media (max-width: 991px) {
+    .notify_wrap {
+        width: 100%;
+    }
+    .login::after {
+        display: none;
+    }
+    .inner_col_wrap.login_btn_bg {
+        margin-top: 2rem;
+    }
+    .modal-content {
+        width: 100%;
+    }
+    .modal-content {
+        padding: 0;
+    }
+}
+@media (max-width: 800px) {
+    .dropdown-menu.dropdown-menu-right {
+        left: 0 !important;
+        right: 0 !important;
+        min-width: 300px!important;
+    }
+    .notify_text_wrap {
+        white-space: initial;
+    }
+}
+@media (max-width: 768px) {
+    .wallet .btn-customNoBg {
+        width: 80% !important;
+    }
+    .settings.wallet .btn-customNoBg {
+        width: 100% !important;
+    }
+    .notify_text_wrap {
+        white-space: initial;
+    }
+    .setting_model .card_custom .card-body .form-group.row label {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .subscription_btns {
+        margin-top: 1rem;
+    }
+    .settings .wallet_red_batch form .sub_input label {
+        font-size: 1.5rem;
+    }
+    .dropdown-menu.dropdown-menu-right {
+        left: 0 !important;
+        right: 0 !important;
+        min-width: 300px!important;
+    }
+    .wallet_black_batch {
+        padding: 2rem 1rem;
+        border-top-right-radius: 0;
+        height: auto;
+    }
+    .walletUserBatch .form-group {
+        padding: 0 1rem;
+        text-align: center;
+    }
+    .settings .wallet_red_batch form {
+        position: unset;
+    }
+    /* .walletUserBatch {
+        padding: 0 1rem;
+    } */
+    .wallet_red_batch {
+        height: 8rem;
+        text-align: center;
+        padding: 0 3rem;
+    }
+    .walletUserBatch .form-control, .walletUserBatch .form-control::placeholder {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .walletUserBatch label {
+        text-align: center;
+    }
+    .wallet .row_wrap {
+        border-radius: 5rem;
+    }
+    .wallet .row_wrap::before,
+    .wallet_black_batch::after,
+    .settings .wallet_red_batch::before {
+        content: none;
+    }
+    .setting_model .card-body img {
+        width: auto;
+    }
+    .wallet_red_batch {
+        left: 0%;
+    }
+    .request_payment .cards .White_card,
+    .request_payment .cards .red_card {
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+    }
+    .card_custom .card-body {
+        display: block;
+    }
+    .card_custom .card-body .text p {
+        text-align: center;
+    }
+    .card_custom .card-body .text,
+    .card_custom .card-body .image {
+        width: 100%;
+    }
+    .card_custom .card-body .image {
+        margin-bottom: 1rem !important;
+    }
+    .black-batch {
+        border-radius: 80px 80px 0px 0px;
+    }
+    .red-batch .row {
+        position: unset;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .user-detail {
+        position: unset;
+    }
+    .red-batch {
+        position: relative;
+        width: 100%;
+        padding: 1rem;
+    }
+    .UserBatch .row_wrap:after {
+        background-image: unset;
+    }
+    .user-profile {
+        justify-content: center;
+    }
+}
+@media (max-width:580px) {
+    .notify_wrap .notification {
+        display: block;
+    }
+}
+@media (max-width:511px) {
+    .digit-group input {
+        width: 15%;
+    }   
+}
+
+
+@media (max-width: 350px) {
+    .user-profile_img {
+        width: 8rem;
+        height: 6rem;
+    }
+}
+
+
+/**/
+@media (max-width: 767px)
+{
+      .wallet h1 , .request_payment h1 , .notify_content h1
+    {
+        font-size: 2.0rem !important;
+    } 
+}
+@media (device-width: 1366px)
+{
+    .dashbord_table table.dataTable tbody th, table.dataTable tbody td, label,.search_field input
+    {
+        font-size: 15px !important;
+    }
+    .dashbord_table table.dataTable thead th , .nav-sidebar .nav-link p, p, .btn-customNoBg
+    {
+        font-size: 15px !important;
+    }
+    .table_head, .user_detail_dropdown p, .user-wallet_balance a, .user-profile_info p
+    {
+       font-size: 18px !important;
+    }
+    .walletUserBatch .form-control, .walletUserBatch .form-control::placeholder
+    {
+        font-size: 15px !important;
+    }
+    .wallet h1 , .request_payment h1 , .notify_content h1
+    {
+        font-size: 1.7rem !important;
+    }
+   
+
+}
+@media (device-width: 1280px)
+{
+    .dashbord_table table.dataTable tbody th, table.dataTable tbody td, label,.search_field input
+    {
+        font-size: 15px !important;
+    }
+    .dashbord_table table.dataTable thead th , .nav-sidebar .nav-link p, p, .btn-customNoBg
+    {
+        font-size: 15px !important;
+    }
+    .table_head, .user_detail_dropdown p, .user-wallet_balance a, .user-profile_info p
+    {
+       font-size: 18px !important;
+    }
+    .walletUserBatch .form-control, .walletUserBatch .form-control::placeholder
+    {
+        font-size: 15px !important;
+    }
+    .wallet h1 , .request_payment h1 , .notify_content h1
+    {
+        font-size: 1.7rem !important;
+    }
+   
+
+}
