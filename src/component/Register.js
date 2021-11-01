@@ -1,11 +1,10 @@
 import {Component} from "react";
-import {useEffect, useState} from "react"
 import axios from 'axios';
 import {Link, withRouter} from "react-router-dom"
 
 class Register extends Component  {
+	
 	constructor(props) {
-
 		super(props);
 		this.state = {
 			first_name : '',
@@ -23,9 +22,7 @@ class Register extends Component  {
 			error_msg_password : '',
 			error_msg_dob : '',
 			error_msg_social_security_no : '',
-			obj_error : {}
 		}
-		console.log(this.state.obj_error);
 	}
 	
 	verifyFirstName = (event) => {
@@ -187,30 +184,13 @@ class Register extends Component  {
 				method : "post", 
 				data:{'password':password, 'email': email, 'first_name' : firstName, 'last_name' : lastName, 'dob' : dob, 'social_security_no': socialSecurityNo, 'is_us_citizen' : isUsCitizen, 'mobile_no' : mobileNo }}
 			).then((response) => {
-				console.log("in res",response.data.data);
-				
-				
-				
 				alert(response.data.message);
-				// this.props.history.push('/home');
-				console.log(this.props);
+				this.props.history.push('/login');
 			}).catch((error) => {
-					
-				if(error.response.data.errors !== 'undefined') {
-					this.setState({
-						obj_error : error.response.data.errors
-					});
-				} else {
-					this.setState({
-						obj_error : {}
-					});
-				}
-				console.log("in cathc", this.state.obj_error);
-
+				//console.log(error.response.data.errors);	
 			});
 		} 
 	}
-
 
 	render () {
 		return (
@@ -226,6 +206,7 @@ class Register extends Component  {
 							<form className="mt-5">	
 								<div className="form-head">
 									<h2 className="sub_head">Create Account</h2>
+									<small> Don't have account <Link to="/login">Sign In</Link></small>
 								</div>
 								<div className="form-group">
 									<label htmlFor="first_name">Frist Name</label>
@@ -277,12 +258,6 @@ class Register extends Component  {
 									<button className="btn btn-primary btn-custom" type="submit" onClick={this.validation}>Login</button>
 								</div>
 								<div className="link_wrap">
-									<ul>
-										
-
-										
-											
-									</ul>
 								</div>
 							</form>
 						</div>
@@ -292,4 +267,6 @@ class Register extends Component  {
 		)
 	}
 }
+
+Register = withRouter(Register)
 export default Register;

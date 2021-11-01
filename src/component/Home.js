@@ -1,6 +1,20 @@
 import {Link, withRouter} from "react-router-dom"
+import {useEffect, useState} from 'react'
 
 function Home(props) {
+	
+
+	var [login, setLogin] = useState(false);
+	useEffect(() => {
+	    if(localStorage.getItem('userAccessToken')) {
+	        setLogin(true);
+	        
+	    } else {
+	        setLogin(false);
+	    }
+
+	},[]);
+	
 	return (
 		<>
 			<div className="col-lg-7 col-md-12 col-12">
@@ -16,7 +30,7 @@ function Home(props) {
 								<h2 className="sub_head">Welcome to</h2>
 								<h2 className="bold_head">MedPenny</h2>
 							</div>
-							<Link to="/login">Login</Link> OR <Link to="/register">Register</Link>
+							{!login && <Link to="/login">Login</Link>} OR {!login &&<Link to="/register">Register</Link>}
 						</form>
 					</div>
 				</div>

@@ -2,6 +2,9 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from './component/Home.js';
 import Login from './component/Login.js';
 import Register from './component/Register.js';
+import Dashboard from './component/Dashboard.js';
+import MyProfile from './component/MyProfile.js';
+import PageNotFound from './component/PageNotFound.js';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
                             <Route exact path="/"><Home/></Route> 
                             <Route exact path="/login" component={Login}><Login/></Route> 
                             <Route exact path="/register" component={Register}><Register/></Route> 
+                            <Route exact path="/dashboard" component={Dashboard}><Dashboard/></Route>
+                            <Route exact path="/my-profile" component={MyProfile}><MyProfile/></Route> 
+                            <Route exact path="/*" component={PageNotFound}><PageNotFound/></Route>
                     
                         </Switch>
                     </Router>

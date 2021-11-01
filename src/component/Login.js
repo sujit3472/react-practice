@@ -1,5 +1,4 @@
 import {Component} from "react";
-import {useState} from "react";
 import axios from 'axios';
 import {Link, withRouter} from "react-router-dom"
 class Login extends Component {
@@ -17,7 +16,7 @@ class Login extends Component {
 	
 	validation = (event) => {
 		event.preventDefault();
-		//console.log(this.state.email);
+		
 		var regex 	   = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		var checkEmail = this.state.email;
 		var password   = this.state.password;
@@ -54,17 +53,14 @@ class Login extends Component {
 				method : "post", 
 				data:{'password':password, 'email': checkEmail, 'device_type' : '1', 'device_token': '1234'}}
 			).then((response) => {
-				// console.log("in res",response.data.data);
 				
 				localStorage.setItem('userAccessToken', response.data.data.loginDetails.accessToken);
 				localStorage.setItem('userRefreshToken', response.data.data.loginDetails.refresh_token);
 				
 				alert(response.data.message);
-				this.props.history.push('/home');
-				console.log(this.props);
+				this.props.history.push('/dashboard');
 			}).catch((error) => {
-					//alert(error.response.data.message)		
-	
+				alert(error.response.data.message);
 			});
 		} 
 	}
@@ -73,7 +69,6 @@ class Login extends Component {
 		this.setState({
 			email : event.target.value
 		});
-		
 	}
 	
 	verifyPassword = (event) => {
@@ -81,7 +76,6 @@ class Login extends Component {
 		this.setState({
 			password : event.target.value
 		});
-		
 	}
 
 	render () {
@@ -99,6 +93,7 @@ class Login extends Component {
 								<div className="form-head">
 									<h2 className="sub_head">Welcome to</h2>
 									<h2 className="bold_head">MedPenny</h2>
+									<small> Don't have account <Link to="/register">Sign Up</Link></small>
 								</div>
 								<div className="form-group">
 									<label htmlFor="email">Email</label>
@@ -109,6 +104,7 @@ class Login extends Component {
 								<div className="form-group password-icon">
 									<label htmlFor="password">Password</label>
 									<input type="password" className="form-control" name="password" onChange={this.verifyPassword}/>
+									<i className="fas fa-eye-slash" id="togglePassword"></i>
 									<label>{this.state.error_password_msg}</label>
 								</div>
 								<div className="text-center">
@@ -125,4 +121,5 @@ class Login extends Component {
 	}
 }
 
+Login = withRouter(Login)
 export default Login;
